@@ -175,15 +175,28 @@ button,input,textarea{font:inherit}button{color:inherit}.hidden{display:none!imp
    The Firebase Web API key is intended to be present in web apps;
    access is protected by Firebase Authentication + Database Rules.
    ============================================================ */
-const FIREBASE_CONFIG = {
-  apiKey: "PASTE_YOUR_API_KEY",
-  authDomain: "PASTE_YOUR_PROJECT.firebaseapp.com",
-  databaseURL: "https://PASTE_YOUR_DATABASE_URL",
-  projectId: "PASTE_YOUR_PROJECT_ID",
-  storageBucket: "PASTE_YOUR_STORAGE_BUCKET",
-  messagingSenderId: "PASTE_YOUR_MESSAGING_SENDER_ID",
-  appId: "PASTE_YOUR_APP_ID"
+// Import the functions you need from the SDKs you need
+import { initializeApp } from "firebase/app";
+import { getAnalytics } from "firebase/analytics";
+// TODO: Add SDKs for Firebase products that you want to use
+// https://firebase.google.com/docs/web/setup#available-libraries
+
+// Your web app's Firebase configuration
+// For Firebase JS SDK v7.20.0 and later, measurementId is optional
+const firebaseConfig = {
+  apiKey: "AIzaSyD3MPe-gDd4Pc6gFl3BV15huW01iQCUDio",
+  authDomain: "whiteboard-a2dd8.firebaseapp.com",
+  databaseURL: "https://whiteboard-a2dd8-default-rtdb.asia-southeast1.firebasedatabase.app",
+  projectId: "whiteboard-a2dd8",
+  storageBucket: "whiteboard-a2dd8.firebasestorage.app",
+  messagingSenderId: "775792116773",
+  appId: "1:775792116773:web:e72395480041065fdaabcc",
+  measurementId: "G-NXTJ9E44KY"
 };
+
+// Initialize Firebase
+const app = initializeApp(firebaseConfig);
+const analytics = getAnalytics(app);
 
 /* Firebase browser modules — current modular SDK pattern */
 import { initializeApp } from "https://www.gstatic.com/firebasejs/12.18.0/firebase-app.js";
